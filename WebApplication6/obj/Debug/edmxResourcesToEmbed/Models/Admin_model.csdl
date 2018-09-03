@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin_Table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CNIC" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Payed_Installment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Remaning_Installment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Applicant_InformationEntities7" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin_Table" EntityType="Self.Admin_Table" />
+  </EntityContainer>
+</Schema>

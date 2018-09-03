@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Applicant_InformationEntities8">
+    <EntitySetMapping Name="Addmin_Table">
+      <EntityTypeMapping TypeName="Model1.Addmin_Table">
+        <MappingFragment StoreEntitySet="Addmin_Table">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product Name" />
+          <ScalarProperty Name="Payed_Installment" ColumnName="Payed Installment" />
+          <ScalarProperty Name="C_Remaning_Installment" ColumnName="[Remaning Installment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

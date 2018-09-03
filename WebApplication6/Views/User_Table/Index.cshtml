@@ -1,0 +1,117 @@
+﻿@model IEnumerable<WebApplication6.Models.User_Table>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br /><br />
+<div class="container">
+  <h2>  Apply Online</h2> 
+</div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Father_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CNIC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Current_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone_Number)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Father_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CNIC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Current_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone_Number)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>*@
+<div class="container">
+<div class="alert alert-dismissible alert-warning">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <h4 class="alert-heading">Thank you!</h4>
+    <p class="mb-0">
+         Your Data has been saved within 24 hour We will you Response Futher Information you can call us 0343789798.Check us @Html.ActionLink("Installment Procedure", "InstallmentProcedure","Home")
+    </p>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Pay Your Installment
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLongTitle">Installment</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://hbl.com/fasttransfer">Pay with HBL</a><br />
+                            <h5>ACCOUNT# (939494840849)</h5>
+                            <img src="~/images/Hbl.JPG" width="250" height="200" />
+
+
+                        </div>
+                        <div class="col-md-3">
+                            <a href="http://www.jazzcash.com.pk/mobile-account/">Pay with Jazz CASH</a><br />
+                            <h5>Phone# (03004567848)</h5>
+                            <img src="~/images/jazz cash.JPG" width="250" height="200"  />
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div><h5>&nbsp;&nbsp;&nbsp;&nbsp; You will soon got Conferm Message</h5></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Thank you</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

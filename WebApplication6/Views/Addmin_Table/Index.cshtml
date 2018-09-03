@@ -1,0 +1,81 @@
+﻿@model IEnumerable<WebApplication6.Models.Addmin_Table>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br /><br />.
+
+<div class="container">
+    <form id="formsearch" method="post">
+
+        <div class="row" id="Search box">
+
+            <div class="form-group has-success">
+                <label class="form-control-label" for="inputSuccess1">Please Enter CNIC:</label>
+                <input type="text" class="form-control is-valid" placeholder="CNIC Number..." id="CNIC" name="CNIC" autocomplete="off"  >
+                <input type="submit" id="submitsearch" value="search"  />
+
+            </div>
+        </div>
+    </form>
+
+    <table class="table" id="hide" >
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CNIC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Payed_Installment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C_Remaning_Installment)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CNIC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Payed_Installment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.C_Remaning_Installment)
+                </td>
+                @*<td>
+                        @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.id })
+                    </td>*@
+            </tr>
+        }
+
+    </table>
+</div>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("table").hide();
+    });
+    $("#submitsearch").click(function () {
+        $("table").show();
+    });
+});
+</script>
